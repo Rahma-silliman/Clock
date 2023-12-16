@@ -1,0 +1,137 @@
+.time {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 0 10px #0003;
+    position: relative;
+
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: aqua;
+}
+
+.hand {
+    text-align: center;
+}
+
+.number {
+    position: absolute;
+    transform: rotate(calc(30deg*var(--n)));
+    inset: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text {
+    position: absolute;
+    font-weight: 700;
+    font-size: large;
+    color: aliceblue;
+}
+
+.clock-center {
+    position: absolute;
+    padding: 0.2rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid;
+    z-index: 5;
+}
+
+.clock-hour {
+    position: absolute;
+    height: 5rem;
+    width: 0.1rem;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+    left: 9.97rem;
+    bottom: 10rem;
+    transform-origin: bottom;
+   
+}
+
+.hour {
+    background-color: antiquewhite;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    left: -0.3rem;
+    
+    top: -2.5rem;
+    box-shadow: 0px 2px 15px 0px;
+}
+
+.clock-minute {
+    background-color: black;
+    position: absolute;
+    height: 4rem;
+    width: 0.1rem;
+    bottom: 10rem;
+    left: 9.97rem;
+    transform-origin: bottom;
+   
+}
+
+.minute {
+    background-color: black;
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    left: -0.25rem;
+    top: -2.5rem;
+    box-shadow: 0px 2px 15px 0px black;
+}
+
+.clock-seconde {
+    background-color: red;
+    position: absolute;
+    width: 0.1rem;
+    height: 3rem;
+    bottom: 10rem;
+    left: 9.97rem;
+    transform-origin: bottom; 
+ 
+}
+
+.seconde {
+    background-color: red;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -0.2rem;
+    top: -2.5rem;
+    box-shadow: 0px 2px 15px 0px red;
+}
+.hours-container,.minutes-container,.secondes-container{
+    position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom:0;
+}
+
+.clock-hour{
+    animation: rotate 43200s infinite linear;
+
+}
+.clock-minute{
+    animation: rotate 3600s infinite linear;
+}
+.clock-seconde{
+    animation: rotate 60s infinite linear;
+}
+@keyframes rotate {
+    100%{
+        transform: rotateZ(360deg)
+    }
+    }
